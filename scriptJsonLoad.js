@@ -21,11 +21,14 @@ fetch("https://webacademy.se/fakestore/")
         const newElement = document.createElement('div')
         newElement.className = 'shop-item'
         newElement.innerHTML = `<span class="shop-item-id">${pro.id}</span>
-                                <span class="shop-item-title">${pro.title} </span>
+                                <span class="shop-item-title"> ${pro.title} </span>
                                 <img class="shop-item-image" src="${pro.image}"/>
                                 <div class="shop-item-details">
-                                
-                                <span class="shop-item-price">${pro.price}</span>
+                                <details>
+                                    <summary>Read more</summary>
+                                    <p>${pro.description}</p>
+                                </details>
+                                <span class="shop-item-price">$ ${pro.price}</span>
                                  <button class="btn btn-primary shop-item-button" type="button">
                                     ADD TO CART</button>
                                   </div>
